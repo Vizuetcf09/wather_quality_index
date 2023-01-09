@@ -1,2 +1,2 @@
-# wather_quality_index
-Predicción de la calidad del agua (WQI) con algoritmos de aprendizaje automático
+# Monitoreo de la Calidad del Agua Mediante Algoritmos de Aprendizaje Automático
+
