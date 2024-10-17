@@ -69,6 +69,9 @@ import numpy as np
 from sklearn.model_selection import RandomizedSearchCV
 from sklearn.ensemble import RandomForestRegressor
 
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -95,6 +98,7 @@ if __name__ == "__main__":
 
     ### leemos el archivo y especificamos la hoja que usaremos como df
     dataset = pd.read_excel('/content/drive/MyDrive/UAM/Calidad del agua /ica_sup_1.xlsx')
+
 
     ## tratamiento de los valores atipicos y nulos
 

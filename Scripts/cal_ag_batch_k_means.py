@@ -87,19 +87,19 @@ if __name__ == "__main__":
     ###  eliminamos las
     X = ch_dbo_1_0_1.drop('SEMAFORO', axis = 1)
 
-    kmeans = MiniBatchKMeans(n_clusters = 3,batch_size = 8).fit(X)
+    kmeans = MiniBatchKMeans(n_clusters = 3,batch_size = 2).fit(X)
 
     print('Total de centros: ', len(kmeans.cluster_centers_))
     print('*'*64)
     print(kmeans.predict(X))
 
-    ch_dbo_1_0_2['GROUP'] = kmeans.predict(X)
+    ch_dbo_1_0_1['GROUP'] = kmeans.predict(X)
 
-    print(ch_dbo_1_0_2)
+    print(ch_dbo_1_0_1)
 
 """# Exportamos el archivo con las predicciones"""
 
-ch_dbo_1_0_1.to_csv('ind_ica.csv')
+# ch_dbo_1_0_1.to_csv('ind_ica.csv')
 
-from google.colab import files
-files.download('ind_ica.csv')
+# from google.colab import files
+# files.download('ind_ica.csv')
